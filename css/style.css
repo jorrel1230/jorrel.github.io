@@ -302,110 +302,56 @@ body {
 }
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 900px) {
     
-    .full_disk_setup {
+.full_disk_setup {
       position: absolute;
       top: 50%;
       left: 50%;
       margin-right: -50%;
       transform: translate(-50%, -50%) scale(0.5);
 
-    }
+}
 
-    .text_clock_song {
-        position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-right: -50%;
-      transform: translate(-50%, -50%);;
-    }
-
-
-    .datetime {
-        font-size: 35px;
-        transform: translateY(-100%)
-    }
-        
-    .datetime h2 {
-        font-size: 75px;
-    }
-        
-        
-    #song_title.info {
-        transform: translateY(600%);
-    }
-
-    #album_title.info {
-        transform: translateY(760%);
-
-    }
-    
-    #artist_name.info {
-        transform: translateY(820%);
-    }
-    
-    
-    #song_progress {
-        transform: scale(0.6) translateY(1200%);
-    }
-
-    .user_info, .bottom_line {
-        display: none;
-    }
-    @media only screen and (max-width: 500px) {
-    
-    .full_disk_setup {
+.text_clock_song {
       position: absolute;
       top: 50%;
       left: 50%;
       margin-right: -50%;
-      transform: translate(-50%, -50%) scale(0.5);
-
-    }
-
-    .text_clock_song {
-        position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-right: -50%;
       transform: translate(-50%, -50%);;
-    }
+}
 
 
-    .datetime {
+.datetime {
         font-size: 35px;
         transform: translateY(-100%)
-    }
+}
         
-    .datetime h2 {
+.datetime h2 {
         font-size: 75px;
-    }
+}
         
         
-    #song_title.info {
+#song_title.info {
         transform: translateY(600%);
-    }
+}
 
-    #album_title.info {
+#album_title.info {
         transform: translateY(760%);
 
-    }
+}
     
-    #artist_name.info {
+#artist_name.info {
         transform: translateY(820%);
-    }
+}
     
     
-    #song_progress {
+#song_progress {
         transform: scale(0.6) translateY(1200%);
-    }
+}
 
-    .user_info, .bottom_line {
+.user_info, .bottom_line {
         display: none;
-    }
-    
-    
 }
     
 }
