@@ -91,7 +91,7 @@ function start_loop() {
     .catch (error => console.log(error))
 
 
-    setInterval(inner_loop, 450, info);
+    setInterval(inner_loop, 750, info);
     setInterval(update_datetime, 2500)
     setInterval(grab_colors, 2500);
 }
