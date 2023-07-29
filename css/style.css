@@ -335,16 +335,20 @@ body {
 #song_title.info {
     transform: translateY(600%);
     font-size: 15px;
+    letter-spacing: 1px;
 }
 
 #album_title.info {
     transform: translateY(760%);
     font-size: 15px;
+    letter-spacing: 1px;
+
 }
     
 #artist_name.info {
     transform: translateY(820%);
     font-size: 15px;
+    letter-spacing: 1px;
 }
     
     
