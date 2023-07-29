@@ -1,3 +1,3 @@
 # jorrel1230.github.io
 
-did u read me?
+README? I didn't even know her! (killing myself)
