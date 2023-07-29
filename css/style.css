@@ -333,16 +333,18 @@ body {
         
         
 #song_title.info {
-        transform: translateY(600%);
+    transform: translateY(600%);
+    font-size: 15px;
 }
 
 #album_title.info {
-        transform: translateY(760%);
-
+    transform: translateY(760%);
+    font-size: 15px;
 }
     
 #artist_name.info {
-        transform: translateY(820%);
+    transform: translateY(820%);
+    font-size: 15px;
 }
     
     
