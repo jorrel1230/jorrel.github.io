@@ -58,12 +58,11 @@ body {
     height: 100%; /* Ensure the image takes up the full space within the circular container */
     object-fit: cover; /* This ensures the image scales properly to cover the circular container */
     transform: scale(0.5);
-
+    border-radius: inherit;
 }
 
 #vinyl_disk {
     border-radius: 50%; /* Create a circular shape with 50% border-radius */
-    content: ""; /* Required for the pseudo-element */
 
     position: fixed;
     width: 100%; /* Ensure the image takes up the full space within the circular container */
@@ -119,8 +118,8 @@ body {
    -------------------- */
 
 .text_clock_song {
-    width: 850px; /* Set the desired width of the circular image */
-    height: 550px; /* Set the desired height of the circular image */
+    width: 850px; 
+    height: 550px; 
     position: fixed;
     top: 50%;
     left: 66.6%;
@@ -275,18 +274,138 @@ body {
 }
 
 
-/* --------------------
-     FFT VISUALIZATION
-   -------------------- */
+@media only screen and (max-width: 1560px) {
+    
+    .full_disk_setup {
+        transform: scale(0.7);
+        position: fixed;
+        top: 10%;
+        left: inherit;
+        
+    }
+    
+    .text_clock_song {
+        transform: translate(-42%, -50%);
+    }
+        
+        
+    .info {
+        font-size: 25px;
+    
+    }
+    
+    #song_progress {
+        transform: scale(0.85)
+    }
+    
+    
+}
 
-.fft_visualization {
-    width: 90%;
-    height: 25%;
 
-    position: fixed;
-    bottom: 0%;
-    left: 50%;
-    background-color: #04AA6D; /* GET RID OF THIS LATER!! TEMP GREEN BOX JUST FOR NOW */
-    opacity: 0%;
-    transform: translateX(-50%);
+@media only screen and (max-width: 500px) {
+    
+    .full_disk_setup {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%) scale(0.5);
+
+    }
+
+    .text_clock_song {
+        position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);;
+    }
+
+
+    .datetime {
+        font-size: 35px;
+        transform: translateY(-100%)
+    }
+        
+    .datetime h2 {
+        font-size: 75px;
+    }
+        
+        
+    #song_title.info {
+        transform: translateY(600%);
+    }
+
+    #album_title.info {
+        transform: translateY(760%);
+
+    }
+    
+    #artist_name.info {
+        transform: translateY(820%);
+    }
+    
+    
+    #song_progress {
+        transform: scale(0.6) translateY(1200%);
+    }
+
+    .user_info, .bottom_line {
+        display: none;
+    }
+    @media only screen and (max-width: 500px) {
+    
+    .full_disk_setup {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%) scale(0.5);
+
+    }
+
+    .text_clock_song {
+        position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);;
+    }
+
+
+    .datetime {
+        font-size: 35px;
+        transform: translateY(-100%)
+    }
+        
+    .datetime h2 {
+        font-size: 75px;
+    }
+        
+        
+    #song_title.info {
+        transform: translateY(600%);
+    }
+
+    #album_title.info {
+        transform: translateY(760%);
+
+    }
+    
+    #artist_name.info {
+        transform: translateY(820%);
+    }
+    
+    
+    #song_progress {
+        transform: scale(0.6) translateY(1200%);
+    }
+
+    .user_info, .bottom_line {
+        display: none;
+    }
+    
+    
+}
+    
 }
