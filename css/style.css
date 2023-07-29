@@ -333,27 +333,28 @@ body {
         
         
 #song_title.info {
-    transform: translateY(600%);
+    transform: translateY(1600%);
     font-size: 15px;
     letter-spacing: 1px;
+    width: 100%;
 }
 
 #album_title.info {
-    transform: translateY(760%);
+    transform: translateY(1700%);
     font-size: 15px;
     letter-spacing: 1px;
 
 }
     
 #artist_name.info {
-    transform: translateY(820%);
+    transform: translateY(1900%);
     font-size: 15px;
     letter-spacing: 1px;
 }
-    
+
     
 #song_progress {
-        transform: scale(0.6) translateY(1200%);
+        transform: scale(0.6) translateY(1800%);
 }
 
 .user_info, .bottom_line {
