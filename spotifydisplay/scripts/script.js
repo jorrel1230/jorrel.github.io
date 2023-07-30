@@ -67,7 +67,7 @@ function start_loop() {
     }
 
     // Hides Access Token from url
-    window.history.pushState({}, document.title, "/");
+    window.history.pushState({}, document.title, "/spotifydisplay/spotifydisplay/");
     console.log("Pull Token Done");
     document.getElementById("butt1").remove();
     document.getElementById("butt2").remove();
