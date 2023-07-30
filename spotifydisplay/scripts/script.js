@@ -41,7 +41,7 @@ function spotify_auth() {
         input.setAttribute('value', params[p]);
         form.appendChild(input);
     }
-
+    console.log(form);
     document.body.appendChild(form);
     form.submit();
 
