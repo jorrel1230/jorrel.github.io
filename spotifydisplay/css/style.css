@@ -1,0 +1,364 @@
+@font-face { font-family: spotifythin; src: url('../fonts/Gotham Thin Regular.otf'); } 
+@font-face { font-family: spotifylight; src: url('../fonts/Gotham Light.otf'); } 
+@font-face { font-family: spotifybold; src: url('../fonts/Gotham Book Regular.otf'); } 
+
+/* Background */
+body {
+    background-image: radial-gradient(at top , rgb(65, 65, 68), rgb(25, 25, 20));
+    background-repeat: repeat-y;
+        
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/* ------------------
+     CD CODE (SPIN)
+   ------------------ */
+.full_disk_setup {
+    width: 650px; /* Set the desired width of the circular image */
+    height: 650px; /* Set the desired height of the circular image */
+    border-radius: 50%;
+    position: fixed;
+    top: 50%;
+    left: 25%;
+
+    background-color: aqua;
+
+    transform: translate(-50%, -50%);
+}
+
+
+.img_container {
+    width: 650px; /* Set the desired width of the circular image */
+    height: 650px; /* Set the desired height of the circular image */
+    border-radius: 50%; /* This creates a circular shape with 50% border-radius */
+    
+    background-color: #ffffff; /* Optionally, set a background color for the circular container */
+    animation-name: spin;
+    animation-duration: 17500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+    /* transform: rotate(3deg); */
+    /* transform: rotate(0.3rad);/ */
+    /* transform: rotate(3grad); */ 
+    /* transform: rotate(.03turn);  */
+    transform: translate(-50%, -50%);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+
+
+}
+
+#album_img {
+    width: 100%; /* Ensure the image takes up the full space within the circular container */
+    height: 100%; /* Ensure the image takes up the full space within the circular container */
+    object-fit: cover; /* This ensures the image scales properly to cover the circular container */
+    transform: scale(0.5);
+    border-radius: inherit;
+}
+
+#vinyl_disk {
+    border-radius: 50%; /* Create a circular shape with 50% border-radius */
+
+    position: fixed;
+    width: 100%; /* Ensure the image takes up the full space within the circular container */
+    height: 100%; /* Ensure the image takes up the full space within the circular container */
+    transform: translate(-100%);
+    
+}
+
+.vinyl_disk_still {
+    position: fixed;
+    width: 100%; /* Ensure the image takes up the full space within the circular container */
+    height: 100%; /* Ensure the image takes up the full space within the circular container */
+    opacity: 30%;
+
+}
+
+.cd {
+    position: fixed;
+    border-radius: 50%; /* Create a circular shape with 50% border-radius */
+    content: ""; /* Required for the pseudo-element */
+}
+
+#outer1.cd {
+    width: 45%; /* Adjust the size of the circle as desired */
+    height: 45%; /* Adjust the size of the circle as desired */
+    border: 30px solid rgb(0, 0, 0); /* Set the color and width of the circle border */
+    transform: translate(42%, 42%);
+
+}
+
+#outer2.cd {
+    width: 95%; /* Adjust the size of the circle as desired */
+    height: 95%; /* Adjust the size of the circle as desired */
+    border: 30px solid rgb(5, 5, 5); /* Set the color and width of the circle border */
+    transform: translate(-2.5%, -2.5%);
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+
+
+
+
+/* --------------------
+     Text, Clock, Song
+   -------------------- */
+
+.text_clock_song {
+    width: 850px; 
+    height: 550px; 
+    position: fixed;
+    top: 50%;
+    left: 66.6%;
+
+    transform: translate(-50%, -50%);
+    align-items: center;
+}
+
+.datetime {
+    font-family: spotifythin;
+    color: #ffffff;
+    font-size: 40px;
+    text-align: center;
+}
+.datetime h2 {
+    font-weight: 30;
+    font-size: 100px;
+    line-height: 0;
+}
+
+
+#song_progress {
+    
+    width: 600px;
+    height: 20px;
+    background-color: rgb(196, 196, 196);
+    border-radius: 10px;
+    border-width:4px;
+    border-style:solid;
+    border-color:black;
+    margin: 0 auto;
+    
+}
+
+#progress_bar  {
+    width: 0%;
+    height: inherit;
+    border-radius: 3px;
+    background-color: #04AA6D;
+
+
+}
+
+.info {
+    font-size: 30px;
+    text-align: center;
+    color: rgb(226, 226, 226);
+
+    overflow-wrap: break-word;
+}
+
+#song_title.info {
+    font-family: spotifylight , monospace,  sans-serif;
+    font-weight: normal;
+    letter-spacing: 0px;
+    font-size: 35px;
+    text-align: center;
+    
+}
+
+#album_title.info {
+    font-family: spotifylight , monospace,  sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    letter-spacing: 0px;
+}
+
+#artist_name.info {
+    font-family: spotifythin , sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    letter-spacing: 0px;
+
+}
+
+
+/* --------------------
+      Header Stuff!!
+   -------------------- */
+
+
+.user_info {
+    font-family: spotifylight ,  sans-serif;
+    font-weight: lighter;
+    color: rgb(226, 226, 226);
+    font-size: 18px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-bottom: 0;
+    transform: translate(0%, 1%);
+}
+
+.user_info, .bottom_line {
+    /* Set both divs to display inline-block */
+    display: inline-block;
+}
+
+.bottom_line img {
+    width: 8.2%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-bottom: 0.5%;
+}
+
+.space {
+    width: 10;
+    height: 1300px;
+}
+
+
+
+.buttons {
+    background-color: #4CAF50; /* Green */
+    border: 2px solid rgb(15, 15, 15);
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+    background-color: #1DB954; 
+    color: rgb(226, 226, 226);
+
+
+    font-family: spotifylight ,  sans-serif;
+    font-weight: lighter;
+    font-size: 18px;
+
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+
+}
+
+.buttons:hover {
+    background-color: white;
+    color: rgb(15, 15, 15);
+    border: 2px solid #1DB954;
+
+}
+
+#butt1 {
+    transform: translateX(75%);
+}
+
+
+@media only screen and (max-width: 1560px) {
+    
+    .full_disk_setup {
+        transform: scale(0.7);
+        position: fixed;
+        top: 10%;
+        left: inherit;
+        
+    }
+    
+    .text_clock_song {
+        transform: translate(-42%, -50%);
+    }
+        
+        
+    .info {
+        font-size: 25px;
+    
+    }
+    
+    #song_progress {
+        transform: scale(0.85)
+    }
+    
+    
+}
+
+
+@media only screen and (max-width: 900px) {
+    
+.full_disk_setup {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%) scale(0.5);
+
+}
+
+.text_clock_song {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);;
+}
+
+
+.datetime {
+        font-size: 35px;
+        transform: translateY(-100%)
+}
+        
+.datetime h2 {
+        font-size: 75px;
+}
+        
+        
+#song_title.info {
+    transform: translateY(1600%);
+    font-size: 15px;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+#album_title.info {
+    transform: translateY(1700%);
+    font-size: 15px;
+    letter-spacing: 1px;
+
+}
+    
+#artist_name.info {
+    transform: translateY(1900%);
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+    
+#song_progress {
+        transform: scale(0.6) translateY(1800%);
+}
+
+.user_info, .bottom_line {
+        display: none;
+}
+    
+}
