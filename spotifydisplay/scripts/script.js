@@ -1,7 +1,7 @@
 // Constants to Pass
 var client_id = "53af47fd3eda4b02b278a45d3f6d319d";
 var client_secret = "b3a5fc175b1a4033b88e61f1a477b69c"
-var redirect_uri = "https://jorrelrajan.com/spotifydisplay/spotifydisplay/";
+var redirect_uri = "https://jorrel1230.github.io/spotifydisplay/spotifydisplay/";
 var scope = "user-read-currently-playing";
 
 // Init Color Picker
