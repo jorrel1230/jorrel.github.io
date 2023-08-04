@@ -1,13 +1,25 @@
 // Constants to Pass
 var client_id = "53af47fd3eda4b02b278a45d3f6d319d";
 var client_secret = "b3a5fc175b1a4033b88e61f1a477b69c"
-var redirect_uri = "https://jorrelrajan.com/spotifydisplay/spotifydisplay";
+var redirect_uri = "http://localhost:8000/spotifydisplay.html"  //"https://jorrelrajan.com/spotifydisplay/spotifydisplay";
 var scope = "user-read-currently-playing";
 
 // Init Color Picker
 const color_thief = new ColorThief();
-dom_color = to_rgb([4, 170, 109]);              // THIS STORES THE SELECTED COLOR!! USEFUL FOR LEDS
+dom_color = [4, 170, 109];              // THIS STORES THE SELECTED COLOR!! USEFUL FOR LEDS
 dom_color_orig = to_rgb([4, 170, 109]);
+
+var isSamePicture = false; // Boolean to check if same pic
+var oldPicURL = '';
+var isManual = false;
+
+// Database Params
+endpoint = 'https://cloud.appwrite.io/v1/databases/led_base/collections/led_coll/documents/led_doc';
+db_params = {
+    'Content-Type': 'application/json',
+    'X-Appwrite-Project': 'jorrel_led_proj',
+    'X-Appwrite-Key': '9f4c8ddd2dc03a7c1b3e91bb5f2ac7ad687af8eb531a4a5a461be7df5268da2d32091a040f4e49a148e3ff6b175b2e379ca28715445c960948eb8971b119aa69b41301318c8a1442d25bdeffc88268978da4014098838a1b6a0518c79ea01fbe581d6fa0efde556ad2b88ff59eeefa259ec2dc77aa336e3835cde528412305a0'
+};
 
 function to_rgb(values) {
     return 'rgb(' + values.join(', ') + ')';
@@ -93,7 +105,6 @@ function start_loop() {
 
     setInterval(inner_loop, 750, info);
     setInterval(update_datetime, 2500)
-    setInterval(grab_colors, 2500);
 }
 
 
@@ -111,15 +122,22 @@ function inner_loop(auth_info) {
         song_name = info.item.name;
         artist_name = info.item.artists[0].name;
         album_name = info.item.album.name;
-        album_url_pic = info.item.album.images[0].url;
         progress_ms = info.progress_ms;
         duration_ms = info.item.duration_ms;
         isPlaying = info.is_playing;
 
+        album_url_pic = info.item.album.images[0].url;
+        isSamePicture = album_url_pic === oldPicURL;
+        oldPicURL = album_url_pic;
+        if (!isSamePicture) {
+            document.getElementById("album_img").src = album_url_pic;
+            setTimeout(grab_colors, 1000);
+        }
+
+
         document.getElementById("song_title").textContent = song_name;
         document.getElementById("album_title").textContent = album_name;
         document.getElementById("artist_name").textContent = artist_name;
-        document.getElementById("album_img").src = album_url_pic;
 
         var bar = document.getElementById("progress_bar");
         var prog = (progress_ms/duration_ms)*100;
@@ -178,11 +196,13 @@ function grab_colors() {
     if (img.complete) {
         color_arr = color_thief.getColor(img);
     } else {
-        return;
+        image.addEventListener('load', function() {
+            colorThief.getColor(img);
+        });
     }
 
 
-    dom_color_orig = to_rgb(color_arr);
+    dom_color_orig = color_arr;
 
     var lum = get_brightness(color_arr);
     if (lum > 175) {
@@ -198,7 +218,46 @@ function grab_colors() {
     }
     
     dom_color = to_rgb(color_arr);
+    updateDatabase(dom_color_orig);
 }
+
+// Takes all current variables and sends them to the database.
+function updateDatabase(colorsRGB) {
+
+    fetch(endpoint, {headers:db_params})
+    .then((data) => data.json())
+    .then((info) => {
+        isManual = info.led_manual;
+        console.log(isManual);
+    })
+    .catch (error => console.log("Error : " + error))
+
+    if (!isManual) {
+        update = {
+            'data': {
+                'red': colorsRGB[0],
+                'green': colorsRGB[1],
+                'blue': colorsRGB[2]
+            }
+        };
+        
+        data_send = JSON.stringify(update);
+
+        fetch(endpoint, {method: 'PATCH', headers:db_params, body:data_send})
+        .then((data) => data.json())
+        .then((info) => {
+            console.log(info);
+        })
+        .catch (error => console.log("Error : " + error))
+    } else {
+        console.log("Auto LED is being Overriden")
+    }
+}
+
+
+
+
+
 
 //INITS FOR STARTUP
 document.addEventListener("DOMContentLoaded", function() {
@@ -228,6 +287,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     document.getElementById("time").textContent = hour + ":" + min + " " + ampm;
+
+    setTimeout(grab_colors, 50);
 
   });
 
