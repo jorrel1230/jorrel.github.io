@@ -7,7 +7,6 @@ params = {
 };
 
 setInterval(function() {
-    console.log("fetching...");
     fetch(endpoint, {headers:params})
     .then((data) => data.json())
     .then((info) => {
