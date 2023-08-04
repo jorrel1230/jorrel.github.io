@@ -3,4 +3,4 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [NC,L]
 
-Redirect /led_controller/led https://led.jorrelrajan.com/
+Redirect https://led.jorrelrajan.com/ /led_controller/led 
