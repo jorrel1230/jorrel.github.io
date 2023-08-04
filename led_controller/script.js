@@ -6,11 +6,7 @@ params = {
 };
 
 update = {
-    'data': {
-        'red': 0,
-        'green': 21,
-        'blue': 211
-    }
+    
 };
 
 data_send = JSON.stringify(update);
