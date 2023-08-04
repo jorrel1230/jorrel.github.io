@@ -1,8 +1,8 @@
-endpoint = 'https://cloud.appwrite.io/v1/databases/64cc7ad959ff6528b257/collections/64cc7ae029b0c05157d8/documents/64cc7bb00ec806007b50';
+endpoint = 'https://cloud.appwrite.io/v1/databases/led/collections/led/documents/doc';
 
 params = {
     'Content-Type': 'application/json',
-    'X-Appwrite-Project': '64cc7a56e91d89cdf429'
+    'X-Appwrite-Project': '64cd1b0e1bd434ed947c'
 };
 
 update = {
