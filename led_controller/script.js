@@ -17,6 +17,7 @@ params = {
 
 // Vars to hold LED status
 var isManual = false;
+var isOn = false;
 var red = 0;
 var green = 0;
 var blue = 0;
@@ -28,6 +29,12 @@ let colorPicker;
 // Function to toggle whether LED is Manual or song-based
 function toggleManual() {
     isManual = !isManual;
+    updateDatabase();
+}
+
+// Function to toggle whether LED is Manual or song-based
+function toggleOn() {
+    isOn = !isOn;
     updateDatabase();
 }
 
@@ -61,7 +68,8 @@ function updateDatabase() {
             'led_manual': isManual,
             'red': red,
             'green': green,
-            'blue': blue
+            'blue': blue,
+            'isOn': isOn
         }
     };
     
