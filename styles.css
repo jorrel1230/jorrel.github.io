@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+
+/*BODY*/
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #12121A;
+
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 150%;
+    color: aliceblue;
+    line-height: 50%;
+}
+
+
+/* CUSTOM SCROLL BAR */
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(84, 80, 93); 
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: radial-gradient(circle at top left, #323139, #323141); 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+}
+
+/* HIDDEN/SHOW ANIMATION */
+.hidden {
+    opacity: 0;
+    transform: translateX(-60%);
+
+    transition: all 0.5s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+
+}
+
+
+/* INNER SECTION DIV */
+.about_me_div {
+    position: relative;
+    width: 90vw;
+    height: 80vh;
+    margin: 3vh;
+    padding: 3vh;
+    background-image: radial-gradient(circle at top left, #474455, #393550);
+    border-radius: 3vh;
+}
+
+.about_me_div section {
+    position: relative;
+}
+
+.projects_div {
+    position: relative;
+    width: 90vw;
+    height: 280vh;
+    margin: 3vh;
+    padding: 3vh;
+    background-image: radial-gradient(circle at top left, #474455, #393550);
+    border-radius: 3vh;
+}
+
+
+/* IMAGES */
+
+.spacer {
+    height: 10%;
+}
+
+.project_imgs {
+    display:flex;
+}
+
+.project_img:nth-child(2) {
+    transition-delay: 300ms;
+}
+.project_img:nth-child(3) {
+    transition-delay: 600ms;
+}
