@@ -1,3 +1,13 @@
+function spotify_redirect() {
+    window.location.href = "https://jorrelrajan.com/spotifydisplay";
+}
+
+function led_redirect() {
+    window.location.href = "https://jorrelrajan.com/led";
+}
+
+
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         console.log(entry);
