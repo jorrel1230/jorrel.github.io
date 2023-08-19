@@ -98,6 +98,23 @@ body, html {
     border-radius: 50%;
 }
 
+.navigation button {
+
+    display: block;
+    background-image: radial-gradient(circle, #474455, #393550);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 10px;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
 
 .navigation .mypicture .border img{
     position: relative;
