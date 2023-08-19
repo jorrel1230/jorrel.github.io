@@ -10,6 +10,26 @@ body, html {
     font-size: 150%;
     color: aliceblue;
     line-height: 50%;
+    scroll-behavior: smooth;
+
+}
+
+
+.navigation {
+    width: 300px;
+    background-color: #333;
+    color: white;
+    height: 100vh; /* Make the navigation bar full height */
+    position: fixed; /* Fixed positioning to keep it in view */
+    top: 0;
+    left: 0;
+    overflow-y: auto; /* Add scroll if content overflows */
+    line-height: 100%;
+}
+
+.content {
+    margin-left: 320px; /* Make space for the navigation */
+    padding: 20px;
 }
 
 
@@ -39,23 +59,21 @@ body, html {
 /* HIDDEN/SHOW ANIMATION */
 .hidden {
     opacity: 0;
-    transform: translateX(-60%);
-
-    transition: all 0.5s;
+    transform: translateX(-100%);
+    transition: all 0.2s;
 }
 
 .show {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
-
 }
 
 
 /* INNER SECTION DIV */
 .about_me_div {
     position: relative;
-    width: 90vw;
+    width: 75vw;
     height: 80vh;
     margin: 3vh;
     padding: 3vh;
@@ -69,7 +87,7 @@ body, html {
 
 .projects_div {
     position: relative;
-    width: 90vw;
+    width: 75vw;
     height: 280vh;
     margin: 3vh;
     padding: 3vh;
