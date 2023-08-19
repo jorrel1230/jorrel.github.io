@@ -14,6 +14,7 @@ body, html {
 
 }
 
+/* MAKE SPACE FOR HEADER */
 
 .navigation {
     width: 300px;
@@ -32,6 +33,11 @@ body, html {
     padding: 20px;
 }
 
+
+/* SCROLL BAR *//* SCROLL BAR *//* SCROLL BAR */
+/* SCROLL BAR *//* SCROLL BAR *//* SCROLL BAR */
+/* SCROLL BAR *//* SCROLL BAR *//* SCROLL BAR */
+/* SCROLL BAR *//* SCROLL BAR *//* SCROLL BAR */
 
 /* CUSTOM SCROLL BAR */
 /* width */
@@ -56,7 +62,11 @@ body, html {
     background: #b30000; 
 }
 
-/* HIDDEN/SHOW ANIMATION */
+
+
+/* HIDDEN/SHOW ANIMATION *//* HIDDEN/SHOW ANIMATION *//* HIDDEN/SHOW ANIMATION */
+/* HIDDEN/SHOW ANIMATION *//* HIDDEN/SHOW ANIMATION *//* HIDDEN/SHOW ANIMATION */
+/* HIDDEN/SHOW ANIMATION *//* HIDDEN/SHOW ANIMATION *//* HIDDEN/SHOW ANIMATION */
 .hidden {
     opacity: 0;
     transform: translateX(-100%);
@@ -67,6 +77,37 @@ body, html {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
+}
+
+/* LEFT SIDE HEADER CSS MODIFICATIONS */
+
+.navigation .mypicture {
+    margin-top: 25px;
+    width: 250px;
+    height: 250px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navigation .mypicture .border {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #12121A;
+    border-radius: 50%;
+}
+
+
+.navigation .mypicture .border img{
+    position: relative;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width:90%;
+    max-height:90%;
+    object-fit: contain;
+    border-radius: 50%;
 }
 
 

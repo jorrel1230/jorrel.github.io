@@ -1,3 +1,4 @@
+/* PROJECT BUTTON FUNCTIONS */
 function spotify_redirect() {
     window.location.href = "https://jorrelrajan.com/spotifydisplay";
 }
