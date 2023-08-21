@@ -13,23 +13,50 @@
 <body>
 
 <div class="navigation">
+    <div class="navigation_overlay"></div>
 
     <div class="mypicture">
         <div class="border">
-            <img src="https://www.theodysseyonline.com/media-library/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vbWVkaWEucmJsLm1zL2ltYWdlP3U9JTJGZmlsZXMlMkYyMDE3JTJGMDMlMkYyNCUyRjYzNjI1OTg0Mzg1ODQxMzY3NTcxNzkyNjIxOF9iaXRtb2ppMzMwOTg0NTM1LnBuZyZobz1odHRwcyUzQSUyRiUyRmF6NjE2NTc4LnZvLm1zZWNuZC5uZXQmcz01NCZoPWU2ZTQxNDU1ZTU5MWM5NzlmZmIxZTM4ZWFiYjg2YTZlZjg5Y2YzOGE5OTBiOTEzZGFhOThmNGU0ODI0NjY3OTcmc2l6ZT05ODB4JmM9MjY2Njg3MTk1MCIsImV4cGlyZXNfYXQiOjE2OTM2NjkyODN9.3FXvx-v7bp9nuz3c1j9P_vKghX5RL4199vTzVhx0RrA/image.jpg">
+            <img src="images/placeholder.png">
         </div>
-
     </div>
 
     <div class="navibuttons">
-        <a href="#aboutme"><button>Home</button></a>
-        <a href="#projects"><button>Projects</button></a>
+        <button onclick="aboutme()">About Me</button>
+        <button onclick="projects()">Projects</button>
+        <button onclick="placeholder()">placholder lol</button>
+        <button onclick="placeholder()">placholder lol</button>
+        <button onclick="placeholder()">placholder lol</button>        
+    </div>
+
+    <div class="iconbuttons">
+        <button id="insta" onclick="insta()">
+            <img src="images\icons\insta.svg">
+        </button>
+
+        <button id="discord" onclick="discord()">
+            <img src="images\icons\discord.png">        
+        </button>
+
+        <button id="linkedin" onclick="linkedin()">
+            <img src="images\icons\linkedin.svg">
+        </button>
+
+        <button id="email" onclick="email()">
+            <img src="images\icons\email.png">
+        </button>
+
+        <button id="github" onclick="github()">
+            <img src="images\icons\github.svg">
+        </button>
     </div>
 </div>
 
 <div class="content">
 
-    <div id="aboutme" class="about_me_div" >
+    <div id="aboutme" class="aboutme_div" >
+        <div class="aboutme_overlay"></div>
+
         <section class="name_sect hidden">
             <h2>Welcome to Jorrel Rajan's Website</h2>
             <p>poopy fart mcfart face</p>
