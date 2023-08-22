@@ -148,6 +148,12 @@ body, html {
     width: 100%;
     display: flex;
     justify-content: center;
+    
+}
+
+.navigation .iconbuttons a {
+    margin: 1.5%;
+    
 }
 
 .navigation .iconbuttons button {
@@ -160,7 +166,6 @@ body, html {
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-    margin: 1.5%;
 
     position: relative;
 
@@ -176,13 +181,18 @@ body, html {
 }
 
 .navigation .iconbuttons button:hover {
-    background-color: rgba(255, 255, 255, 0.08);
-    scale: 1.03;
-    box-shadow: 7px 7px 9px #121212;
+    background-color: rgba(255, 255, 255, 0.07);
+    scale: 1.2;
+    box-shadow: 7px 7px 11px #121212;
 
 }
 
 .navigation .iconbuttons img {
+    position: inherit;
+    left: 50%;
+    top: 50%;
+    transform: translate(-61%, -69%);
+
     scale: 0.8;
     filter: invert(0.7);
 }
