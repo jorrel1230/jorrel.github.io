@@ -1,99 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jorrel Rajan's Website</title>
-    <link rel="stylesheet" href="styles.css?1">
-    <script defer src="script.js?1"></script>
-
+  <title>Jorrel's Website</title>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="output.css" rel="stylesheet">
 </head>
+<body class="bg-[#121212]">
+  <div class="fixed top-0 left-0 h-screen w-1/5 m-0 flex flex-col bg-white bg-opacity-5 rounded-r-3xl rounded-br-3xl text-white shadow-lg"> <!-- NAV BAR -->
 
-<body>
-
-<div class="navigation">
-    <div class="navigation_overlay"></div>
-
-    <div class="mypicture">
-        <div class="border">
-            <img src="images/placeholder.png">
-        </div>
+    <div class="centerobj mt-12 w-3/4 aspect-square bg-[#121212] rounded-full"> <!-- Personal Picture -->
+      <img src="imgs/placeholder.png" class="relative left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 rounded-full w-11/12 h-11/12">
     </div>
 
-    <div class="navibuttons">
-        <button onclick="aboutme()">About Me</button>
-        <button onclick="projects()">Projects</button>
-        <button onclick="placeholder()">placholder lol</button>
-        <button onclick="placeholder()">placholder lol</button>
-        <button onclick="placeholder()">placholder lol</button>        
+    <div> <!-- Page Link Buttons -->
+      <a href="#" class="block navbutton centerobj w-3/5 aspect-[5/1] p-0 mt-4 leading-[3.5]">About Me</a>
+      <a href="#" class="block navbutton centerobj w-3/5 aspect-[5/1] p-0 mt-4 leading-[3.5]">Projects</a>
+      <a href="#" class="block navbutton centerobj w-3/5 aspect-[5/1] p-0 mt-4 leading-[3.5]">UNDER CONTRUCTION</a>
+      <a href="#" class="block navbutton centerobj w-3/5 aspect-[5/1] p-0 mt-4 leading-[3.5]">UNDER CONTRUCTION</a>
+      <a href="#" class="block navbutton centerobj w-3/5 aspect-[5/1] p-0 mt-4 mb-12 leading-[3.5]">UNDER CONTRUCTION</a>
     </div>
 
-    <div class="iconbuttons">
-        <a href="https://www.instagram.com/_jorrel/">
-        <button id="insta" onclick="insta()">
-            <img src="images\icons\insta.svg">
-        </button></a>
 
-        <a href="https://discord.com/users/304680442349748224">
-        <button id="discord" onclick="discord()">
-            <img src="images\icons\discord.png">        
-        </button></a>
-        
-
-        <a href="https://jorrelrajan.com/temp">
-        <button id="linkedin" onclick="linkedin()">
-            <img src="images\icons\linkedin.svg">
-        </button></a>
-        
-
-        <a href="mailto:jorrel@princeton.edu">
-        <button id="email" onclick="email()">
-            <img src="images\icons\email.png">
-        </button></a>
-        
-
-        <a href="https://github.com/jorrel1230">
-        <button id="github" onclick="github()">
-            <img src="images\icons\github.svg">
-        </button></a>
-       
+    <div class="flex justify-center"> <!-- Personal Profiles Link Buttons -->
+      <a href="https://www.instagram.com/_jorrel/" class="navbutton w-1/6 hover:scale-110 aspect-square p-0 m-4"><img class="iconimgs" src="imgs/icons/insta.svg"></a>
+      <a href="https://github.com/jorrel1230" class="navbutton w-1/6 hover:scale-110 aspect-square p-0 m-4"><img class="iconimgs" src="imgs/icons/github.svg"></a>
+      <a href="https://jorrelrajan.com/temp" class="navbutton w-1/6 hover:scale-110 aspect-square p-0 m-4"><img class="iconimgs" src="imgs/icons/linkedin.svg"></a>
     </div>
-</div>
 
-<div class="content">
-
-    <div id="aboutme" class="aboutme_div" >
-        <div class="aboutme_overlay"></div>
-
-        <section class="name_sect hidden">
-            <h2>Welcome to Jorrel Rajan's Website</h2>
-        </section>
-    
-        <button onclick="spotify_redirect()">SpotifyDisplay</button>
-        <button onclick="led_redirect()">LED Controller</button>
+    <div class="flex justify-center"> <!-- Personal Profiles Link Buttons -->
+      <a href="mailto:jorrel@princeton.edu" class="navbutton w-1/6 aspect-square hover:scale-110 p-0 m-4"><img class="iconimgs" src="imgs/icons/email.png"></a>
+      <a href="https://discord.com/users/304680442349748224" class="navbutton w-1/6 hover:scale-110 aspect-square p-0 m-4"><img class="iconimgs" src="imgs/icons/discord.png"></a>
     </div>
     
+
     
+
+  </div>
+  
+  <div class="fixed top-0 left-[20%] w-[80vw] h-screen overflow-y-scroll snap-mandatory snap-y"> <!-- CONTENT -->
+
+    <div class="displaycard snap-center"> <!-- Screen 1-->
+      <h1 class="text-8xl p-2">hello world</h1>
+
+      <a href="https://jorrelrajan.com/spotifydisplay" class="block navbutton centerobj w-3/5 aspect-[5/1] p-0 mt-4 leading-[10]">Spotify Display</a>
+      <a href="https://jorrelrajan.com/led" class="block navbutton centerobj w-3/5 aspect-[5/1] p-0 mt-4 leading-[10]">LED Controller</a>
+
+
+
+    </div>
+
+    <div class="displaycard snap-center"> <!-- Screen 2-->
+      <h1 class="text-3xl p-2">hello world 2</h1>
+    </div>
+
+    <div class="displaycard snap-center"> <!-- Screen 3-->
+      <h1 class="text-xl p-2">hello world 3</h1>
+    </div>
     
-    <div id="projects" class="projects_div">
-
-        <section class="background_sect hidden">
-            <h2>pee </h2>
-            <p>kpop</p>
-        </section>
-
-        <div class="spacer"></div>
-        <img src="https://cdn.discordapp.com/attachments/1058561760589779026/1142294322721587282/3dgifmaker90637.gif">
-        <div class="project_imgs">
-            <img class="project_img hidden" src="https://clipartix.com/wp-content/uploads/2016/04/Cool-skull-clip-art-and-funny.png">
-            <img class="project_img hidden" src="https://clipartix.com/wp-content/uploads/2016/04/Cool-skull-clip-art-and-funny.png">
-            <img class="project_img hidden" src="https://clipartix.com/wp-content/uploads/2016/04/Cool-skull-clip-art-and-funny.png">
-        </div> 
-    </div> <!-- End of Div class="projects_div" -->
-</div> <!-- // End of Div class="content" -->
 
 
 
+  </div>
 </body>
 </html>
