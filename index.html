@@ -6,8 +6,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="output.css" rel="stylesheet">
+  <script defer src="script.js"></script>
 </head>
-<body class="bg-[#121212]">
+<body class="bg-[#121212] ">
   <div class="fixed top-0 left-0 h-screen w-1/5 m-0 flex flex-col bg-white bg-opacity-5 rounded-r-3xl rounded-br-3xl text-white shadow-lg"> <!-- NAV BAR -->
 
     <div class="centerobj mt-12 w-3/4 aspect-square bg-[#121212] rounded-full"> <!-- Personal Picture -->
@@ -15,9 +16,9 @@
     </div>
 
     <div> <!-- Page Link Buttons -->
-      <a href="#" class="block navbutton centerobj w-3/5 aspect-[5/1] p-0 mt-4 leading-[3.5]">About Me</a>
-      <a href="#" class="block navbutton centerobj w-3/5 aspect-[5/1] p-0 mt-4 leading-[3.5]">Projects</a>
-      <a href="#" class="block navbutton centerobj w-3/5 aspect-[5/1] p-0 mt-4 leading-[3.5]">UNDER CONTRUCTION</a>
+      <a href="#screen1" class="block navbutton centerobj w-3/5 aspect-[5/1] p-0 mt-4 leading-[3.5]">About Me</a>
+      <a href="#personal-projects" class="block navbutton centerobj w-3/5 aspect-[5/1] p-0 mt-4 leading-[3.5]">Projects</a>
+      <a href="#screen3" class="block navbutton centerobj w-3/5 aspect-[5/1] p-0 mt-4 leading-[3.5]">UNDER CONTRUCTION</a>
       <a href="#" class="block navbutton centerobj w-3/5 aspect-[5/1] p-0 mt-4 leading-[3.5]">UNDER CONTRUCTION</a>
       <a href="#" class="block navbutton centerobj w-3/5 aspect-[5/1] p-0 mt-4 mb-12 leading-[3.5]">UNDER CONTRUCTION</a>
     </div>
@@ -26,7 +27,7 @@
     <div class="flex justify-center"> <!-- Personal Profiles Link Buttons -->
       <a href="https://www.instagram.com/_jorrel/" class="navbutton w-1/6 hover:scale-110 aspect-square p-0 m-4"><img class="iconimgs" src="imgs/icons/insta.svg"></a>
       <a href="https://github.com/jorrel1230" class="navbutton w-1/6 hover:scale-110 aspect-square p-0 m-4"><img class="iconimgs" src="imgs/icons/github.svg"></a>
-      <a href="https://jorrelrajan.com/temp" class="navbutton w-1/6 hover:scale-110 aspect-square p-0 m-4"><img class="iconimgs" src="imgs/icons/linkedin.svg"></a>
+      <a href="https://www.linkedin.com/in/jorrel-rajan-14b49228a" class="navbutton w-1/6 hover:scale-110 aspect-square p-0 m-4"><img class="iconimgs" src="imgs/icons/linkedin.svg"></a>
     </div>
 
     <div class="flex justify-center"> <!-- Personal Profiles Link Buttons -->
@@ -39,27 +40,38 @@
 
   </div>
   
-  <div class="fixed top-0 left-[20%] w-[80vw] h-screen overflow-y-scroll snap-mandatory snap-y"> <!-- CONTENT -->
+  <div id="content" class="fixed top-0 left-[20%] w-[80vw] h-screen overflow-y-scroll snap-mandatory snap-y scroll-smooth"> <!-- CONTENT -->
 
-    <div class="displaycard snap-center"> <!-- Screen 1-->
-      <h1 class="text-8xl p-2">hello world</h1>
+    <div id="screen1" class="displaycard snap-center"> <!-- Screen 1-->
+      <h1 class="text-4xl p-2">Quick Links - Temporary... Soon to be about me section</h1>
 
-      <a href="https://jorrelrajan.com/spotifydisplay" class="block navbutton centerobj w-3/5 aspect-[5/1] p-0 mt-4 leading-[10]">Spotify Display</a>
-      <a href="https://jorrelrajan.com/led" class="block navbutton centerobj w-3/5 aspect-[5/1] p-0 mt-4 leading-[10]">LED Controller</a>
-
-
+      <a href="https://jorrelrajan.com/spotifydisplay" class="block navbutton centerobj w-2/5 p-0 mt-4 leading-[5]">Spotify Display</a>
+      <a href="https://jorrelrajan.com/led" class="block navbutton centerobj w-2/5 p-0 mt-4 leading-[5]">LED Controller</a>
 
     </div>
 
-    <div class="displaycard snap-center"> <!-- Screen 2-->
-      <h1 class="text-3xl p-2">hello world 2</h1>
+    <div id="personal-projects" class="displaycard snap-center"> <!-- Screen 2-->
+      <h1 class="text-3xl p-2">Personal Projects</h1>
+
+      <div class="w-[29%] h-[29%] flex justify-center"> <!-- Row 1 -->
+
+        <div class="displaycard w-max h-max m-5 p-0 relative left-28"></div>
+        <div class="displaycard w-[29%] h-[29%] m-5 p-0 relative left-28"></div>
+        <div class="displaycard w-[29%] h-[29%] m-5 p-0 relative left-28"></div>
+
+      </div> 
+      <div class="w-full h-full"> <!-- Row 2 -->
+
+
+
+
+
+      </div>
     </div>
 
-    <div class="displaycard snap-center"> <!-- Screen 3-->
+    <div id="screen3" class="displaycard snap-center"> <!-- Screen 3-->
       <h1 class="text-xl p-2">hello world 3</h1>
     </div>
-    
-
 
 
   </div>
